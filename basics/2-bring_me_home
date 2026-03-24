@@ -1,3 +1,2 @@
 #!/bin/bash
-# changes working directory to home
-cd
+cd ~
