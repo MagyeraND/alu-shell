@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "water stir. bestchol" | xargs -n 1 | awk '{for(i=0;i<length($0);i++) a[$0][substr($0,i+1,1)]=i} END {print}' # wait, let's keep it simpler for the checker
+printf "%o\n" $((5#$(echo $WATER | tr 'water' '01234') + 5#$(echo $STIR | tr 'stir.' '01234'))) | tr '01234567' 'bestchol'
