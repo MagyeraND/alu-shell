@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Displays a message indefinitely with a 2 second sleep
 while true
 do
     echo "To infinity and beyond"
