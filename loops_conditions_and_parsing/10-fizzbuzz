@@ -1,17 +1,6 @@
 #!/usr/bin/env bash
-# Classic FizzBuzz implementation
-for i in {1..100}
+# Parses /etc/passwd while excluding unused variables for Shellchecker
+while IFS=: read -r user _ uid _ _ home _
 do
-    if [ $((i % 3)) -eq 0 ] && [ $((i % 5)) -eq 0 ]
-    then
-        echo "FizzBuzz"
-    elif [ $((i % 3)) -eq 0 ]
-    then
-        echo "Fizz"
-    elif [ $((i % 5)) -eq 0 ]
-    then
-        echo "Buzz"
-    else
-        echo "$i"
-    fi
-done
+    echo "$user:$uid:$home"
+done < /etc/passwd
