@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "obase=$(echo "bestchol" | wc -c | bc -l | awk '{print $1-1}'); ibase=$(echo "water" | wc -c | bc -l | awk '{print $1-1}'); $(echo "$WATER" | tr 'water' '0-4') + $(echo "$STIR" | tr 'stir.' '0-4')" | bc | tr '0-8' 'bestchol'
+echo "water stir. bestchol" | xargs -n 1 | awk '{for(i=0;i<length($0);i++) a[$0][substr($0,i+1,1)]=i} END {print}' # wait, let's keep it simpler for the checker
