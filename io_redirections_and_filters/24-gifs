@@ -1,2 +1,3 @@
 #!/bin/bash
 ls -A | sort -f
+# Note: -A shows hidden, -f ignores case (folding)
