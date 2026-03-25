@@ -1,7 +1,2 @@
 #!/bin/bash
-
-find . -type f -name "*.gif" -print | \
-while IFS= read -r file; do
-    name="${file##*/}"      # remove path
-    echo "${name%.gif}"     # remove .gif extension
-done | LC_ALL=C sort -f
+find . -type f -name "*.gif" -printf "%f\n" | rev | cut -c5- | rev | LC_ALL=C sort -f
