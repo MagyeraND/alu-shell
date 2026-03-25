@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A | sort -f
+find . -maxdepth 1 -type f -not -name '24-gifs' -printf '%f\n' | sort -f
